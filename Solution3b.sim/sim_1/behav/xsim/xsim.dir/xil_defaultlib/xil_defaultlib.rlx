@@ -1,0 +1,9 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sim_1/new/tb_ram_memory2.v,1622141091,verilog,,,,tb_ram_memory2,,,,,,,,
+E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sources_1/new/decode_sram.v,1622141714,verilog,,E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sources_1/new/ram_memory.v,,decode_sram,,,,,,,,
+E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sources_1/new/ram_memory.v,1622139341,verilog,,E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sources_1/new/static_ram.v,,ram_memory,,,,,,,,
+E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sources_1/new/static_ram.v,1622137602,verilog,,E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.srcs/sim_1/new/tb_ram_memory2.v,,static_ram,,,,,,,,

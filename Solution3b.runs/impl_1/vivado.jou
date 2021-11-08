@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Aug 17 01:26:25 2021
+# Process ID: 15976
+# Current directory: E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.runs/impl_1
+# Command line: vivado.exe -log ram_memory.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ram_memory.tcl -notrace
+# Log file: E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.runs/impl_1/ram_memory.vdi
+# Journal file: E:/previous assignments/DigitalSystemsAndMicroprocessors/assignment2_revised/demos/Solutions/Solution3b/Solution3b.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ram_memory.tcl -notrace

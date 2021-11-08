@@ -1,0 +1,959 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Aug 17 01:27:59 2021
+| Host         : Shehzad-PC running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file ram_memory_timing_summary_routed.rpt -pb ram_memory_timing_summary_routed.pb -rpx ram_memory_timing_summary_routed.rpx -warn_on_violation
+| Design       : ram_memory
+| Device       : 7z030i-ffg676
+| Speed File   : -2L  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.000        0.000                      0                    7        3.430        0.000                      0                    7       30.900        0.000                       0                     5  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock      Waveform(ns)       Period(ns)      Frequency(MHz)
+-----      ------------       ----------      --------------
+readwrite  {0.000 31.250}     62.500          16.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+readwrite           0.000        0.000                      0                    7        3.430        0.000                      0                    7       30.900        0.000                       0                     5  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  readwrite
+  To Clock:  readwrite
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.000ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        3.430ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       30.900ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 input_1
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            31.250ns  (readwrite fall@31.250ns - readwrite rise@0.000ns)
+  Data Path Delay:        0.734ns  (logic 0.293ns (39.923%)  route 0.441ns (60.077%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            40.000ns
+  Clock Path Skew:        1.734ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Time Borrowing:         
+    Nominal pulse width:              31.250ns
+    Library setup time:               0.002ns
+    Computed max time borrow:         31.252ns
+    Time borrowed from endpoint:      7.786ns
+    Open edge uncertainty:           -0.035ns
+    Time given to startpoint:         7.750ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 40.000    40.000    
+    W17                                               0.000    40.000 r  input_1 (IN)
+                         net (fo=0)                   0.000    40.000    input_1
+    W17                  IBUF (Prop_ibuf_I_O)         0.293    40.293 r  input_1_IBUF_inst/O
+                         net (fo=1, routed)           0.441    40.734    s1/input_1_IBUF
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000    32.984    
+                         clock uncertainty           -0.035    32.948    
+                         time borrowed                7.786    40.734    
+  -------------------------------------------------------------------
+                         required time                         40.734    
+                         arrival time                         -40.734    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+Slack (MET) :             2.205ns  (required time - arrival time)
+  Source:                 input_2
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s2/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            31.250ns  (readwrite fall@31.250ns - readwrite rise@0.000ns)
+  Data Path Delay:        0.744ns  (logic 0.303ns (40.692%)  route 0.441ns (59.308%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            30.000ns
+  Clock Path Skew:        1.734ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 30.000    30.000    
+    W15                                               0.000    30.000 r  input_2 (IN)
+                         net (fo=0)                   0.000    30.000    input_2
+    W15                  IBUF (Prop_ibuf_I_O)         0.303    30.303 r  input_2_IBUF_inst/O
+                         net (fo=1, routed)           0.441    30.744    s2/input_2_IBUF
+    SLICE_X0Y4           LDCE                                         r  s2/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s2/p_0_in
+    SLICE_X0Y4           LDCE                                         r  s2/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000    32.984    
+                         clock uncertainty           -0.035    32.948    
+  -------------------------------------------------------------------
+                         required time                         32.948    
+                         arrival time                         -30.744    
+  -------------------------------------------------------------------
+                         slack                                  2.205    
+
+Slack (MET) :             7.965ns  (required time - arrival time)
+  Source:                 s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_2
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Max at Slow Process Corner
+  Requirement:            62.500ns  (readwrite fall@93.750ns - readwrite fall@31.250ns)
+  Data Path Delay:        4.025ns  (logic 2.634ns (65.432%)  route 1.391ns (34.568%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           40.000ns
+  Clock Path Skew:        -4.378ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 93.750 - 93.750 ) 
+    Source Clock Delay      (SCD):    4.378ns = ( 35.628 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802    32.052 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963    34.015    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093    34.108 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520    35.628    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+                         time given to startpoint     6.096    41.725    
+    SLICE_X0Y3                                        0.000    41.725 r  s1/memory_reg/D
+    SLICE_X0Y3           LDCE (DToQ_ldce_D_Q)         0.240    41.965 r  s1/memory_reg/Q
+                         net (fo=4, routed)           0.260    42.225    s2/output_1_OBUF
+    SLICE_X0Y4           LUT2 (Prop_lut2_I1_O)        0.043    42.268 r  s2/output_2_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.131    43.399    output_2_OBUF
+    AA14                 OBUF (Prop_obuf_I_O)         2.351    45.750 r  output_2_OBUF_inst/O
+                         net (fo=0)                   0.000    45.750    output_2
+    AA14                                                              r  output_2 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     93.750    93.750 f  
+                         clock pessimism              0.000    93.750    
+                         clock uncertainty           -0.035    93.715    
+                         output delay               -40.000    53.715    
+  -------------------------------------------------------------------
+                         required time                         53.715    
+                         arrival time                         -45.750    
+  -------------------------------------------------------------------
+                         slack                                  7.965    
+
+Slack (MET) :             12.249ns  (required time - arrival time)
+  Source:                 input_3
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s3/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Setup (Max at Fast Process Corner)
+  Requirement:            31.250ns  (readwrite fall@31.250ns - readwrite rise@0.000ns)
+  Data Path Delay:        0.700ns  (logic 0.298ns (42.561%)  route 0.402ns (57.440%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            20.000ns
+  Clock Path Skew:        1.734ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 20.000    20.000    
+    W16                                               0.000    20.000 r  input_3 (IN)
+                         net (fo=0)                   0.000    20.000    input_3
+    W16                  IBUF (Prop_ibuf_I_O)         0.298    20.298 r  input_3_IBUF_inst/O
+                         net (fo=1, routed)           0.402    20.700    s3/input_3_IBUF
+    SLICE_X0Y3           LDCE                                         r  s3/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s3/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s3/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000    32.984    
+                         clock uncertainty           -0.035    32.948    
+  -------------------------------------------------------------------
+                         required time                         32.948    
+                         arrival time                         -20.700    
+  -------------------------------------------------------------------
+                         slack                                 12.249    
+
+Slack (MET) :             12.605ns  (required time - arrival time)
+  Source:                 s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_4
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Max at Slow Process Corner
+  Requirement:            62.500ns  (readwrite fall@93.750ns - readwrite fall@31.250ns)
+  Data Path Delay:        4.385ns  (logic 2.633ns (60.050%)  route 1.752ns (39.950%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           35.000ns
+  Clock Path Skew:        -4.378ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 93.750 - 93.750 ) 
+    Source Clock Delay      (SCD):    4.378ns = ( 35.628 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802    32.052 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963    34.015    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093    34.108 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520    35.628    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+                         time given to startpoint     6.096    41.725    
+    SLICE_X0Y3                                        0.000    41.725 r  s1/memory_reg/D
+    SLICE_X0Y3           LDCE (DToQ_ldce_D_Q)         0.240    41.965 r  s1/memory_reg/Q
+                         net (fo=4, routed)           0.570    42.535    s4/output_1_OBUF
+    SLICE_X0Y6           LUT2 (Prop_lut2_I1_O)        0.043    42.578 r  s4/output_4_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.182    43.760    output_4_OBUF
+    AB17                 OBUF (Prop_obuf_I_O)         2.350    46.110 r  output_4_OBUF_inst/O
+                         net (fo=0)                   0.000    46.110    output_4
+    AB17                                                              r  output_4 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     93.750    93.750 f  
+                         clock pessimism              0.000    93.750    
+                         clock uncertainty           -0.035    93.715    
+                         output delay               -35.000    58.715    
+  -------------------------------------------------------------------
+                         required time                         58.715    
+                         arrival time                         -46.110    
+  -------------------------------------------------------------------
+                         slack                                 12.605    
+
+Slack (MET) :             18.278ns  (required time - arrival time)
+  Source:                 s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_1
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Max at Slow Process Corner
+  Requirement:            62.500ns  (readwrite fall@93.750ns - readwrite fall@31.250ns)
+  Data Path Delay:        3.712ns  (logic 2.572ns (69.284%)  route 1.140ns (30.716%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           30.000ns
+  Clock Path Skew:        -4.378ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 93.750 - 93.750 ) 
+    Source Clock Delay      (SCD):    4.378ns = ( 35.628 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802    32.052 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963    34.015    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093    34.108 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520    35.628    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+                         time given to startpoint     6.096    41.725    
+    SLICE_X0Y3                                        0.000    41.725 r  s1/memory_reg/D
+    SLICE_X0Y3           LDCE (DToQ_ldce_D_Q)         0.240    41.965 r  s1/memory_reg/Q
+                         net (fo=4, routed)           1.140    43.105    output_1_OBUF
+    Y16                  OBUF (Prop_obuf_I_O)         2.332    45.436 r  output_1_OBUF_inst/O
+                         net (fo=0)                   0.000    45.436    output_1
+    Y16                                                               r  output_1 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     93.750    93.750 f  
+                         clock pessimism              0.000    93.750    
+                         clock uncertainty           -0.035    93.715    
+                         output delay               -30.000    63.715    
+  -------------------------------------------------------------------
+                         required time                         63.715    
+                         arrival time                         -45.436    
+  -------------------------------------------------------------------
+                         slack                                 18.278    
+
+Slack (MET) :             27.848ns  (required time - arrival time)
+  Source:                 s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_3
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Max at Slow Process Corner
+  Requirement:            62.500ns  (readwrite fall@93.750ns - readwrite fall@31.250ns)
+  Data Path Delay:        4.142ns  (logic 2.624ns (63.346%)  route 1.518ns (36.654%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           20.000ns
+  Clock Path Skew:        -4.378ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 93.750 - 93.750 ) 
+    Source Clock Delay      (SCD):    4.378ns = ( 35.628 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802    32.052 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963    34.015    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093    34.108 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520    35.628    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+                         time given to startpoint     6.096    41.725    
+    SLICE_X0Y3                                        0.000    41.725 r  s1/memory_reg/D
+    SLICE_X0Y3           LDCE (DToQ_ldce_D_Q)         0.240    41.965 r  s1/memory_reg/Q
+                         net (fo=4, routed)           0.378    42.343    s3/output_1_OBUF
+    SLICE_X0Y4           LUT2 (Prop_lut2_I1_O)        0.043    42.386 r  s3/output_3_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.140    43.526    output_3_OBUF
+    AA15                 OBUF (Prop_obuf_I_O)         2.341    45.867 r  output_3_OBUF_inst/O
+                         net (fo=0)                   0.000    45.867    output_3
+    AA15                                                              r  output_3 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     93.750    93.750 f  
+                         clock pessimism              0.000    93.750    
+                         clock uncertainty           -0.035    93.715    
+                         output delay               -20.000    73.715    
+  -------------------------------------------------------------------
+                         required time                         73.715    
+                         arrival time                         -45.867    
+  -------------------------------------------------------------------
+                         slack                                 27.848    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.430ns  (arrival time - required time)
+  Source:                 s1/memory_reg/G
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_1
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (readwrite fall@31.250ns - readwrite fall@31.250ns)
+  Data Path Delay:        1.731ns  (logic 1.404ns (81.105%)  route 0.327ns (18.895%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -1.734ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 31.250 - 31.250 ) 
+    Source Clock Delay      (SCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y3           LDCE (EnToQ_ldce_G_Q)        0.148    33.132 r  s1/memory_reg/Q
+                         net (fo=4, routed)           0.327    33.459    output_1_OBUF
+    Y16                  OBUF (Prop_obuf_I_O)         1.256    34.715 r  output_1_OBUF_inst/O
+                         net (fo=0)                   0.000    34.715    output_1
+    Y16                                                               r  output_1 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+                         clock pessimism              0.000    31.250    
+                         clock uncertainty            0.035    31.285    
+                         output delay                -0.000    31.285    
+  -------------------------------------------------------------------
+                         required time                        -31.285    
+                         arrival time                          34.715    
+  -------------------------------------------------------------------
+                         slack                                  3.430    
+
+Slack (MET) :             3.588ns  (arrival time - required time)
+  Source:                 s3/memory_reg/G
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_3
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (readwrite fall@31.250ns - readwrite fall@31.250ns)
+  Data Path Delay:        1.890ns  (logic 1.441ns (76.252%)  route 0.449ns (23.747%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -1.734ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 31.250 - 31.250 ) 
+    Source Clock Delay      (SCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s3/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s3/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y3           LDCE (EnToQ_ldce_G_Q)        0.148    33.132 r  s3/memory_reg/Q
+                         net (fo=1, routed)           0.123    33.254    s3/memory
+    SLICE_X0Y4           LUT2 (Prop_lut2_I0_O)        0.028    33.282 r  s3/output_3_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.326    33.609    output_3_OBUF
+    AA15                 OBUF (Prop_obuf_I_O)         1.265    34.874 r  output_3_OBUF_inst/O
+                         net (fo=0)                   0.000    34.874    output_3
+    AA15                                                              r  output_3 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+                         clock pessimism              0.000    31.250    
+                         clock uncertainty            0.035    31.285    
+                         output delay                -0.000    31.285    
+  -------------------------------------------------------------------
+                         required time                        -31.285    
+                         arrival time                          34.874    
+  -------------------------------------------------------------------
+                         slack                                  3.588    
+
+Slack (MET) :             3.606ns  (arrival time - required time)
+  Source:                 s1/memory_reg/G
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_2
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (readwrite fall@31.250ns - readwrite fall@31.250ns)
+  Data Path Delay:        1.908ns  (logic 1.451ns (76.070%)  route 0.456ns (23.930%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -1.734ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 31.250 - 31.250 ) 
+    Source Clock Delay      (SCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y3           LDCE (EnToQ_ldce_G_Q)        0.148    33.132 r  s1/memory_reg/Q
+                         net (fo=4, routed)           0.138    33.270    s2/output_1_OBUF
+    SLICE_X0Y4           LUT2 (Prop_lut2_I1_O)        0.028    33.298 r  s2/output_2_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.318    33.616    output_2_OBUF
+    AA14                 OBUF (Prop_obuf_I_O)         1.275    34.891 r  output_2_OBUF_inst/O
+                         net (fo=0)                   0.000    34.891    output_2
+    AA14                                                              r  output_2 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+                         clock pessimism              0.000    31.250    
+                         clock uncertainty            0.035    31.285    
+                         output delay                -0.000    31.285    
+  -------------------------------------------------------------------
+                         required time                        -31.285    
+                         arrival time                          34.891    
+  -------------------------------------------------------------------
+                         slack                                  3.606    
+
+Slack (MET) :             6.588ns  (arrival time - required time)
+  Source:                 input_3
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s3/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (readwrite rise@0.000ns - readwrite rise@0.000ns)
+  Data Path Delay:        1.133ns  (logic 0.633ns (55.888%)  route 0.500ns (44.112%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            10.000ns
+  Clock Path Skew:        4.378ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    4.378ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 10.000    10.000    
+    W16                                               0.000    10.000 r  input_3 (IN)
+                         net (fo=0)                   0.000    10.000    input_3
+    W16                  IBUF (Prop_ibuf_I_O)         0.633    10.633 r  input_3_IBUF_inst/O
+                         net (fo=1, routed)           0.500    11.133    s3/input_3_IBUF
+    SLICE_X0Y3           LDCE                                         r  s3/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+    AC12                                              0.000     0.000 r  readwrite (IN)
+                         net (fo=0)                   0.000     0.000    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802     0.802 r  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963     2.765    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.858 r  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520     4.378    s3/p_0_in
+    SLICE_X0Y3           LDCE                                         f  s3/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000     4.378    
+                         clock uncertainty            0.035     4.414    
+    SLICE_X0Y3           LDCE (Hold_ldce_G_D)         0.132     4.546    s3/memory_reg
+  -------------------------------------------------------------------
+                         required time                         -4.546    
+                         arrival time                          11.133    
+  -------------------------------------------------------------------
+                         slack                                  6.588    
+
+Slack (MET) :             16.631ns  (arrival time - required time)
+  Source:                 input_2
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s2/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (readwrite rise@0.000ns - readwrite rise@0.000ns)
+  Data Path Delay:        1.183ns  (logic 0.638ns (53.931%)  route 0.545ns (46.070%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            20.000ns
+  Clock Path Skew:        4.378ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    4.378ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 20.000    20.000    
+    W15                                               0.000    20.000 r  input_2 (IN)
+                         net (fo=0)                   0.000    20.000    input_2
+    W15                  IBUF (Prop_ibuf_I_O)         0.638    20.638 r  input_2_IBUF_inst/O
+                         net (fo=1, routed)           0.545    21.183    s2/input_2_IBUF
+    SLICE_X0Y4           LDCE                                         r  s2/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+    AC12                                              0.000     0.000 r  readwrite (IN)
+                         net (fo=0)                   0.000     0.000    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802     0.802 r  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963     2.765    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.858 r  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520     4.378    s2/p_0_in
+    SLICE_X0Y4           LDCE                                         f  s2/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000     4.378    
+                         clock uncertainty            0.035     4.414    
+    SLICE_X0Y4           LDCE (Hold_ldce_G_D)         0.139     4.553    s2/memory_reg
+  -------------------------------------------------------------------
+                         required time                         -4.553    
+                         arrival time                          21.183    
+  -------------------------------------------------------------------
+                         slack                                 16.631    
+
+Slack (MET) :             26.621ns  (arrival time - required time)
+  Source:                 input_1
+                            (input port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            s1/memory_reg/D
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (readwrite rise@0.000ns - readwrite rise@0.000ns)
+  Data Path Delay:        1.174ns  (logic 0.629ns (53.560%)  route 0.545ns (46.439%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            30.000ns
+  Clock Path Skew:        4.378ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    4.378ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+                         input delay                 30.000    30.000    
+    W17                                               0.000    30.000 r  input_1 (IN)
+                         net (fo=0)                   0.000    30.000    input_1
+    W17                  IBUF (Prop_ibuf_I_O)         0.629    30.629 r  input_1_IBUF_inst/O
+                         net (fo=1, routed)           0.545    31.174    s1/input_1_IBUF
+    SLICE_X0Y3           LDCE                                         r  s1/memory_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite rise edge)
+                                                      0.000     0.000 r  
+    AC12                                              0.000     0.000 r  readwrite (IN)
+                         net (fo=0)                   0.000     0.000    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.802     0.802 r  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           1.963     2.765    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     2.858 r  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           1.520     4.378    s1/p_0_in
+    SLICE_X0Y3           LDCE                                         f  s1/memory_reg/G  (IS_INVERTED)
+                         clock pessimism              0.000     4.378    
+                         clock uncertainty            0.035     4.414    
+    SLICE_X0Y3           LDCE (Hold_ldce_G_D)         0.139     4.553    s1/memory_reg
+  -------------------------------------------------------------------
+                         required time                         -4.553    
+                         arrival time                          31.174    
+  -------------------------------------------------------------------
+                         slack                                 26.621    
+
+Slack (MET) :             33.578ns  (arrival time - required time)
+  Source:                 s4/memory_reg/G
+                            (negative level-sensitive latch clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Destination:            output_4
+                            (output port clocked by readwrite  {rise@0.000ns fall@31.250ns period=62.500ns})
+  Path Group:             readwrite
+  Path Type:              Min at Fast Process Corner
+  Requirement:            0.000ns  (readwrite fall@31.250ns - readwrite fall@31.250ns)
+  Data Path Delay:        1.880ns  (logic 1.438ns (76.470%)  route 0.442ns (23.531%))
+  Logic Levels:           2  (LUT2=1 OBUF=1)
+  Output Delay:           30.000ns
+  Clock Path Skew:        -1.734ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 31.250 - 31.250 ) 
+    Source Clock Delay      (SCD):    1.734ns = ( 32.984 - 31.250 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+    AC12                                              0.000    31.250 f  readwrite (IN)
+                         net (fo=0)                   0.000    31.250    readwrite
+    AC12                 IBUF (Prop_ibuf_I_O)         0.144    31.394 f  readwrite_IBUF_inst/O
+                         net (fo=1, routed)           0.896    32.290    readwrite_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    32.316 f  readwrite_IBUF_BUFG_inst/O
+                         net (fo=4, routed)           0.668    32.984    s4/readwrite_IBUF_BUFG
+    SLICE_X1Y6           LDCE                                         r  s4/memory_reg/G  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y6           LDCE (EnToQ_ldce_G_Q)        0.135    33.119 r  s4/memory_reg/Q
+                         net (fo=1, routed)           0.082    33.200    s4/memory
+    SLICE_X0Y6           LUT2 (Prop_lut2_I0_O)        0.028    33.228 r  s4/output_4_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.361    33.589    output_4_OBUF
+    AB17                 OBUF (Prop_obuf_I_O)         1.275    34.864 r  output_4_OBUF_inst/O
+                         net (fo=0)                   0.000    34.864    output_4
+    AB17                                                              r  output_4 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock readwrite fall edge)
+                                                     31.250    31.250 f  
+                         clock pessimism              0.000    31.250    
+                         clock uncertainty            0.035    31.285    
+                         output delay               -30.000     1.285    
+  -------------------------------------------------------------------
+                         required time                         -1.285    
+                         arrival time                          34.864    
+  -------------------------------------------------------------------
+                         slack                                 33.578    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         readwrite
+Waveform(ns):       { 0.000 31.250 }
+Period(ns):         62.500
+Sources:            { readwrite }
+
+Check Type       Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period       n/a     BUFG/I   n/a            1.409         62.500      61.091     BUFGCTRL_X0Y0  readwrite_IBUF_BUFG_inst/I
+Low Pulse Width  Slow    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y3     s1/memory_reg/G
+Low Pulse Width  Fast    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y3     s1/memory_reg/G
+Low Pulse Width  Slow    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y4     s2/memory_reg/G
+Low Pulse Width  Fast    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y4     s2/memory_reg/G
+Low Pulse Width  Slow    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y3     s3/memory_reg/G
+Low Pulse Width  Fast    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X0Y3     s3/memory_reg/G
+Low Pulse Width  Slow    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X1Y6     s4/memory_reg/G
+Low Pulse Width  Fast    LDCE/G   n/a            0.350         31.250      30.900     SLICE_X1Y6     s4/memory_reg/G
+
+
+

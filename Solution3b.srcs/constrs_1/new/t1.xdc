@@ -1,0 +1,26 @@
+
+
+set_property BEL DFF [get_cells s4/memory_reg]
+set_property LOC SLICE_X1Y6 [get_cells s4/memory_reg]
+set_property BEL D6LUT [get_cells s4/output_4_OBUF_inst_i_1]
+set_property LOC SLICE_X0Y6 [get_cells s4/output_4_OBUF_inst_i_1]
+set_property LOC AB17 [get_cells output_4_OBUF_inst]
+
+create_clock -period 62.500 -name readwrite -waveform {0.000 31.250} -add [get_ports readwrite]
+set_input_delay -clock [get_clocks readwrite] -min -add_delay 30.000 [get_ports input_1]
+set_input_delay -clock [get_clocks readwrite] -max -add_delay 40.000 [get_ports input_1]
+set_input_delay -clock [get_clocks readwrite] -min -add_delay 20.000 [get_ports input_2]
+set_input_delay -clock [get_clocks readwrite] -max -add_delay 30.000 [get_ports input_2]
+set_input_delay -clock [get_clocks readwrite] -min -add_delay 10.000 [get_ports input_3]
+set_input_delay -clock [get_clocks readwrite] -max -add_delay 20.000 [get_ports input_3]
+set_input_delay -clock [get_clocks readwrite] -min -add_delay 50.000 [get_ports input_4]
+set_input_delay -clock [get_clocks readwrite] -max -add_delay 60.000 [get_ports input_4]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -min -add_delay 0.000 [get_ports output_1]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -max -add_delay 30.000 [get_ports output_1]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -min -add_delay 0.000 [get_ports output_2]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -max -add_delay 40.000 [get_ports output_2]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -min -add_delay 0.000 [get_ports output_3]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -max -add_delay 20.000 [get_ports output_3]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -min -add_delay 30.000 [get_ports output_4]
+set_output_delay -clock [get_clocks readwrite] -clock_fall -max -add_delay 35.000 [get_ports output_4]
+set_max_delay -from [get_pins s4/memory_reg/D] -to [get_ports output_4] 55.000
